@@ -7,37 +7,55 @@
 </ion-header> -->
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <h1>Welcome Back, [User]</h1>
+    <h1>Welcome Back, [User]</h1>
 
-  <div id="low-in-stock">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Low in Stock</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-card>
-          grocery pictures in here, probably a for loop through groceries with quantity and image.
-        </ion-card>
-      </ion-card-content>
-    </ion-card>
-  </div>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Recommended Recipes</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
+    <div id="low-in-stock">
       <ion-card>
-        
         <ion-card-header>
-          <ion-card-title>Recipe #1</ion-card-title>
+          <ion-card-title>Low in Stock</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          [Short Recipe Description goes here]
+          <ion-card>
+            grocery pictures in here, probably a for loop through groceries with quantity and image.
+          </ion-card>
         </ion-card-content>
       </ion-card>
+    </div>
 
-    </ion-card-content>
-  </ion-card>
+    <div id="recommended-recipes">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Recommended Recipes</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Recipe #1</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              [Short Recipe Description goes here]
+            </ion-card-content>
+          </ion-card>
 
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Recipe #2</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              [Short Recipe Description goes here]
+            </ion-card-content>
+          </ion-card>
+
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Recipe #3</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              [Short Recipe Description goes here]
+            </ion-card-content>
+          </ion-card>
+
+        </ion-card-content>
+      </ion-card>
+    </div>
 </ion-content>
