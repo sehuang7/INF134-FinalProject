@@ -25,3 +25,68 @@
 #container a {
   text-decoration: none;
 }
+
+#low-in-stock {
+  ion-card-title {
+    font-size: 20px;
+  }
+  ion-card {
+  border-radius: 16px; 
+  color: black;
+  background-color: #A4C2A8;
+  }
+
+  ion-card-content {
+    display: flex; 
+    flex-direction: row; 
+    overflow-x: auto;
+    white-space: nowrap;
+
+    ion-card {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      background-color: white;
+      margin-left: 4px;
+    }
+  }
+}
+
+h1 {
+  padding-top: 56px;
+  margin-left: 16px;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+#recommended-recipes {
+  ion-card-title {
+    font-size: 20px;
+  }
+
+  ion-card {
+    background-color: #A4C2A8;
+    border-radius: 16px; 
+    
+  }
+  ion-card-content {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+
+    ion-card {
+      color: red;
+      background-color: white;
+      width: 140px; /* Ensure two columns with space in between */
+      height: 140px;
+      align-items: center;
+      justify-content: center;
+      margin-left: 4px;
+    }
+  }
+
+}
+
+ion-content {
+  --background: #FFF9ED;
+}

@@ -1,13 +1,55 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>search</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">search</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="Recipe-Search">
+    <h1>Recipes</h1>
+    <ion-button shape="round">
+      <ion-icon slot="icon-only" name="search"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id="match-recipe">
+    <ion-card>
+      <ion-card-content>
+        insert content here
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div id="category">
+    <h1>Other Recipes By Category</h1>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-card>
+          Category #1
+        </ion-card>
+
+        <ion-card>
+          Category #2
+        </ion-card>
+
+        <ion-card>
+          Category #3
+        </ion-card>
+
+        <ion-card>
+          Category #4
+        </ion-card>
+
+        <ion-card>
+          Category #5
+        </ion-card>
+
+        <ion-card>
+          Category #6
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
 </ion-content>

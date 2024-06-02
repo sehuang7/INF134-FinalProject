@@ -1,0 +1,58 @@
+ion-content {
+    --background: #FFF9ED;
+}
+
+#Recipe-Search {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    --color: black;
+
+    ion-button {
+        --background: #A4C2A8;
+        --color: black;
+        width: 60px;
+        height: 60px;
+        margin-top: 64px;
+        margin-left: 60%;
+        size: large;
+    }
+
+    h1 {
+        padding-top: 30%;
+        margin-left: 16px;
+    }
+}
+
+#match-recipe {
+    ion-card{
+        width: 380px;
+        height: 300px;
+        --background:#A4C2A8;
+    }
+}
+
+#category {
+    h1 {
+        margin-left: 16px;
+        padding-top: 8%;
+    }
+
+    ion-card {
+        width: 380px;
+        height: 260px;
+        --background:#A4C2A8;
+        margin-left: 16px;
+    }
+
+    ion-card-content {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+    
+        ion-card {
+            --background: white;
+            width: 100px;
+            height: 100px;
+            margin: 8px;
+        }
+    }
+}
