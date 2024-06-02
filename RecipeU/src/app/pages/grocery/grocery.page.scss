@@ -1,0 +1,93 @@
+ion-content {
+    --background: #FFF9ED;
+}
+
+h1 {
+    padding-top: 56px;
+  margin-left: 16px;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+#Add-Items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    ion-button {
+        --background: #A4C2A8;
+        --color: black;
+        width: 60px;
+        height: 60px;
+        margin-top: 64px;
+        margin-left: 60%;
+        size: large;
+    }
+
+    h1{
+        margin-right: 10px;
+    }
+}
+
+#Fridge {
+    ion-card {
+    width: 380px;
+    height: 380px;
+    margin-left: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    --background: #A4C2A8;
+    }
+
+    ion-card-title {
+        font-size: 20px;
+    }
+
+    ion-card-content {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        // overflow: hidden;
+        // overflow-y: auto;
+        // white-space: nowrap;
+
+        ion-card {
+            --background: white;
+            width: 100px;
+            height: 100px;
+            margin: 8px;
+        }
+    }
+}
+
+#Pantry {
+    ion-card {
+        width: 380px;
+        height: 380px;
+        margin-left: 16px;
+        border-radius: 16px;
+        overflow: hidden;
+        overflow-y: auto;
+        white-space: nowrap;
+        --background: #A4C2A8;
+        }
+    
+        ion-card-title {
+            font-size: 20px;
+        }
+    
+        ion-card-content {
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            // overflow: hidden;
+            // overflow-y: auto;
+            // white-space: nowrap;
+    
+            ion-card {
+                width: 100px;
+                height: 100px;
+                margin: 8px;
+                --background: white;
+            }
+        }
+}
