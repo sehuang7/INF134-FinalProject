@@ -15,9 +15,14 @@
           <ion-card-title>Low in Stock</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-card>
-            grocery pictures in here, probably a for loop through groceries with quantity and image.
+          <ion-card *ngFor="let item of lowInStock">
+            <ion-card-header>
+              <ion-card-title>{{item.name}}</ion-card-title>
+              <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
+              <ion-card-subtitle>{{item.unit}}</ion-card-subtitle>
+            </ion-card-header>
           </ion-card>
+
         </ion-card-content>
       </ion-card>
     </div>
@@ -28,27 +33,9 @@
           <ion-card-title>Recommended Recipes</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-card>
+          <ion-card *ngFor="let recipe of recipes">
             <ion-card-header>
-              <ion-card-title>Recipe #1</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              [Short Recipe Description goes here]
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Recipe #2</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              [Short Recipe Description goes here]
-            </ion-card-content>
-          </ion-card>
-
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Recipe #3</ion-card-title>
+              <ion-card-title>{{recipe.title}}</ion-card-title>
             </ion-card-header>
             <ion-card-content>
               [Short Recipe Description goes here]

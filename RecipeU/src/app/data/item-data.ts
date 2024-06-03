@@ -1,8 +1,8 @@
 
-export class ItemData {
+var units:string[] = ['oz', 'lbs', 'ct'];
+var types:string[] = ['Fridge Item', 'Pantry/Cabinet Item']
 
-    units:string[] = ['oz', 'lbs', 'ct'];
-    types:string[] = ['Fridge Item', 'Pantry/Cabinet Item']
+export class ItemData {
 
     name:string;
     image:string;
@@ -14,8 +14,8 @@ export class ItemData {
         this.name = name;
         this.image = image;
         this.quantity = quantity;
-        this.unit = this.units[unit_i];
-        this.type = this.types[type_i];
+        this.unit = units[unit_i];
+        this.type = types[type_i];
         
     }
 }

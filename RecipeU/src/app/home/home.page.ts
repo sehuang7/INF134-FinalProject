@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RecipeService } from '../services/recipe.service';
+import { ItemData } from '../data/item-data';
+import { RecipeData } from '../data/recipe-data';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor() {}
+  public lowInStock:ItemData[] = [];
+  public recipes:RecipeData[] = []
 
+  constructor(public recipeService:RecipeService) {
+
+  }
+
+  ngOnInit() {
+      this.lowInStock = this.recipeService.getAllItems();
+      this.recipes = this.recipeService.getAllRecipes();
+  }
+  
 }

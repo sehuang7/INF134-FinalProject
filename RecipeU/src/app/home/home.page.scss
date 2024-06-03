@@ -39,12 +39,14 @@
   ion-card-content {
     display: flex; 
     flex-direction: row; 
-    overflow-x: auto;
+    overflow-x: scroll;
     white-space: nowrap;
 
     ion-card {
-      width: 100px;
-      height: 100px;
+      min-width: 100px;
+      min-height: 100px;
+      max-width: 100px;
+      max-height: 100px;
       display: flex;
       align-items: center;
       background-color: white;
@@ -89,4 +91,5 @@ h1 {
 
 ion-content {
   --background: #FFF9ED;
+
 }

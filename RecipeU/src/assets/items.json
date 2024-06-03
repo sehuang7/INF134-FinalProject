@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Cucumber",
+        "image": "",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Eggs",
+        "image": "",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Scallions",
+        "image": "",
+        "quantity": "2",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Edamame",
+        "image": "",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "American Cheese",
+        "image": "",
+        "quantity": "3",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Beef",
+        "image": "",
+        "quantity": "0.5",
+        "unit": [1, "lbs"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "Teriyaki Sauce",
+        "image": "",
+        "quantity": "50",
+        "unit": [0, "oz"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "Carrots",
+        "image": "",
+        "quantity": "10",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "White Bread",
+        "image": "",
+        "quantity": "2",
+        "unit": [2, "ct"],
+        "type": [1, "Pantry/Cabinet"]
+    }, 
+    {
+        "name": "Banana",
+        "image": "",
+        "quantity": "4",
+        "unit": [2, "ct"],
+        "type": [1, "Pantry/Cabinet"]
+    }, 
+    {
+        "name": "Jasmine Rice",
+        "image": "",
+        "quantity": "20",
+        "unit": [1, "lbs"],
+        "type": [1, "Pantry/Cabinet"]
+    }
+]
