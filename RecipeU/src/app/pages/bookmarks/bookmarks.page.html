@@ -8,15 +8,19 @@
   <h1>Saved Recipes</h1>
 
   <div id="saved-list">
-    <!-- ng For -->
-    <ion-card>
+  
+    <ion-card *ngFor="let recipe of bookmarked">
       <ion-card-content>
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <!-- <img src="{{recipe.image}}" /> -->
+        <img alt="PLACEHOLDER" src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636">
         <div>
-          <ion-card-title>Card Subtitle</ion-card-title>
-          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          <ion-card-title>{{recipe.title}}</ion-card-title>
+          <p>Prep: {{recipe.prep_time}}</p>
+          <p>Cook: {{recipe.cook_time}}</p>
         </div>
       </ion-card-content>
     </ion-card>
+    
   </div>
+
 </ion-content>

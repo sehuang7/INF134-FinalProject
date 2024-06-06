@@ -25,28 +25,8 @@
 
     <ion-card>
       <ion-card-content>
-        <ion-card>
-          Category #1
-        </ion-card>
-
-        <ion-card>
-          Category #2
-        </ion-card>
-
-        <ion-card>
-          Category #3
-        </ion-card>
-
-        <ion-card>
-          Category #4
-        </ion-card>
-
-        <ion-card>
-          Category #5
-        </ion-card>
-
-        <ion-card>
-          Category #6
+        <ion-card *ngFor="let cat of categories">
+          <ion-card-title>{{cat}}</ion-card-title>
         </ion-card>
       </ion-card-content>
     </ion-card>

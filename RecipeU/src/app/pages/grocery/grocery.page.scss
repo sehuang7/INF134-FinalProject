@@ -91,3 +91,40 @@ h1 {
             }
         }
 }
+
+ion-modal {
+    --border-radius: 20px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --height: 50%;
+    --width: 90%;
+}
+
+
+ion-modal ion-toolbar {
+    --background: #A4C2A8;
+    --color: black;
+    
+  }
+
+#modal {
+    --background: #A4C2A8;
+
+}
+
+
+#quant-picker {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40px;
+    height: 40px;
+
+
+    ion-input {
+        width: 40px;
+        background-color: white;
+        border-radius: 10px;
+        height: 40px;
+        margin-top: 5px;
+    }
+
+}

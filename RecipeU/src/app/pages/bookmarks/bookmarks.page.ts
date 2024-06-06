@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/services/recipe.service';
+import { RecipeData } from 'src/app/data/recipe-data';
 
 @Component({
   selector: 'app-bookmarks',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookmarksPage implements OnInit {
 
-  constructor() { }
+  public bookmarked:RecipeData[] = [];
+
+  constructor(public recipeService:RecipeService) { }
 
   ngOnInit() {
+    this.bookmarked = this.recipeService.getAllSavedRecipes();
   }
 
 }

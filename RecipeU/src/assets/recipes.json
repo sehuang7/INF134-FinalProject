@@ -69,5 +69,49 @@
       "Stir in the yogurt and season with salt and pepper.",
       "Garnish with fresh coriander leaves and serve."
     ]
+  },
+  {
+    "title": "Katsu Curry",
+    "image": "",
+    "prep_time": "30 minutes",
+    "cook_time": "30 minutes",
+    "rating": 4.7,
+    "ingredients": [
+    ],
+    "instructions": [
+    ]
+  }, 
+  {
+    "title": "Beef Teriyaki with Rice and Edamame",
+    "image": "",
+    "prep_time": "15 minutes",
+    "cook_time": "30 minutes",
+    "rating": 4.8,
+    "ingredients": [
+    ],
+    "instructions": [
+    ]
+  },
+  {
+    "title": "Cheeseburgers",
+    "image": "",
+    "prep_time": "10 minutes",
+    "cook_time": "20 minutes",
+    "rating": 4.7,
+    "ingredients": [
+    ],
+    "instructions": [
+    ]
+  }, 
+  {
+    "title": "Chicken Burrito",
+    "image": "",
+    "prep_time": "15 minutes",
+    "cook_time": "15 minutes",
+    "rating": 4.7,
+    "ingredients": [
+    ],
+    "instructions": [
+    ]
   }
 ]
