@@ -9,7 +9,7 @@
 
   <div id="saved-list">
   
-    <ion-card *ngFor="let recipe of bookmarked">
+    <ion-card *ngFor="let recipe of bookmarked" (click)="openRecipeDetails(recipe.id)">
       <ion-card-content>
         <!-- <img src="{{recipe.image}}" /> -->
         <img alt="PLACEHOLDER" src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636">
