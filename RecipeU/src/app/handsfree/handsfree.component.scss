@@ -1,0 +1,72 @@
+.content {
+    padding: 16px;
+  }
+  
+  .progress-bar ion-progress-bar {
+    margin-bottom: 8px;
+  }
+  
+  .step-instruction {
+    margin-bottom: 16px;
+    h2 {
+      font-size: 1.2em;
+    }
+    p {
+      margin: 8px 0 8px 0;
+    }
+    ion-icon {
+      margin-left: 8px;
+    }
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    ion-button {
+      flex: 1;
+      margin: 0 4px; // Adjust spacing between buttons
+    }
+  }
+
+//   .card-header-with-button {
+//     position: relative;
+//   }
+  
+//   .card-header-with-button ion-button {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     margin-bottom: 16px;
+//     margin-right: 16px; /* Add desired spacing */
+//   }
+  
+//   .card-header-with-button ion-card-title {
+//    margin-top: 40px;
+
+//   }
+
+  .card-header-with-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .close-button {
+    position: absolute;
+    left: 0;
+    margin-left: 8px;
+  }
+  
+  .volume-icon {
+    position: absolute;
+    right: 0;
+    margin-right: 8px; /* Add margin for spacing */
+    cursor: pointer;
+
+  }
+  
+//   .volume-icon.active {
+//     color: black; /* Change color when active */
+//   }
