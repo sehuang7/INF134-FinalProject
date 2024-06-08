@@ -1,13 +1,50 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Hands-Free Mode</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="dismissModal()">Close</ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <!-- Add your hands-free mode content here -->
-  <p>This is hands-free mode content.</p>
+  <ion-card>
+    
+    <!-- <ion-card-header class="card-header-with-button">
+      <ion-button (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+      <ion-card-title>Step {{ currentStepIndex + 1 }}</ion-card-title>
+
+      <ion-icon 
+      (click)="toggleVolume()" 
+      [name]="volumeIcon" 
+      [class.active]="isVolumeActive"
+      class="volume-icon" 
+      slot="end">
+    </ion-icon>
+
+    </ion-card-header> -->
+
+        <ion-card-header class="card-header-with-button">
+          <ion-button (click)="dismissModal()" class="close-button">
+            <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+          </ion-button>
+          <ion-card-title>Step {{ currentStepIndex + 1 }}</ion-card-title>
+          <!-- Volume icon addition -->
+          <ion-button class="volume-icon">
+            <ion-icon slot="icon-only" name="volume-high"></ion-icon>
+          </ion-button>
+        </ion-card-header>
+    
+    <ion-card-content>
+      <h1>{{ recipeData.instructions[currentStepIndex] }}</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" (click)="previousStep()" [disabled]="currentStepIndex === 0">
+              Previous
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button expand="block" (click)="nextStep()" [disabled]="currentStepIndex === recipeData.instructions.length - 1">
+              Next
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
