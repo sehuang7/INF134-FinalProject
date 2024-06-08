@@ -16,7 +16,9 @@ export class HandsfreeComponent  implements OnInit {
   volumeIcon: string = 'volume-high-outline'; // Default icon name
   
 
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController) { 
+    
+  }
 
   ngOnInit() {
     console.log(this.recipeData);
