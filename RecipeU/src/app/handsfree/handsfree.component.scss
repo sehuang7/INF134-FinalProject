@@ -66,7 +66,38 @@
     cursor: pointer;
 
   }
+
+  .ingredient-list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .ingredient-checkbox {
+    font-size: 18px;
+  }
+
+  ion-progress-bar {
+    margin-top: 10px; /* Adjust margin as desired */
+    margin-bottom: 10px; /* Adjust margin as desired */
+  }
   
+  ion-card img {
+    width: 100%; /* Ensure the image takes full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+  
+  /* Style for pressed button */
+  ion-button.pressed {
+    --background: green;    /* Change to green when pressed */
+    --background-activated: green; /* Ensure it stays green while pressed */
+  }
+
+  ion-button span.emoji {
+    display: block;
+    margin-bottom: 4px; /* Space between emoji and text */
+  }
+
 //   .volume-icon.active {
 //     color: black; /* Change color when active */
 //   }

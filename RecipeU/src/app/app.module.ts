@@ -9,10 +9,16 @@ import { HandsfreeComponent } from './handsfree/handsfree.component';
 
 import { AddGroceriesComponent } from './modals/add-groceries/add-groceries.component';
 import { UpdateGroceriesComponent } from './modals/update-groceries/update-groceries.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [AppComponent, HandsfreeComponent, AddGroceriesComponent, UpdateGroceriesComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', {
+  enabled: !isDevMode(),
+  // Register the ServiceWorker as soon as the application is stable
+  // or after 30 seconds (whichever comes first).
+  registrationStrategy: 'registerWhenStable:30000'
+})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

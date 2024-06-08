@@ -14,6 +14,8 @@ export class HandsfreeComponent  implements OnInit {
   currentStepIndex: number = 0;
   isVolumeActive: boolean = false; // Track the volume icon state
   volumeIcon: string = 'volume-high-outline'; // Default icon name
+  additionalCardTitle: string = 'Perform Gesture'; // Title for the new card
+  pressedButton: string = ''; // Track which button is pressed
   
 
   constructor(private modalController: ModalController) { 
@@ -28,6 +30,12 @@ export class HandsfreeComponent  implements OnInit {
     this.modalController.dismiss();
   }
 
+  get progress(): number {
+    return (this.currentStepIndex + 1) / this.recipeData.instructions.length;
+  }
+
+
+
   nextStep() {
     if (this.currentStepIndex < this.recipeData.instructions.length - 1) {
       this.currentStepIndex++;
@@ -40,6 +48,21 @@ export class HandsfreeComponent  implements OnInit {
     }
   }
 
+  handleAction(action: string) {
+    this.pressedButton = action;
+    this.additionalCardTitle = `${action} Gesture Recognized!`;
+    if (action === 'Previous') {
+      this.previousStep();
+    } else if (action === 'Next') {
+      this.nextStep();
+    }
+  }
+
+  resetButtonPress() {
+    setTimeout(() => {
+      this.pressedButton = '';
+    }, 1000); // Reset the button press state after 1 second
+  }
   toggleVolume() {
     this.isVolumeActive = !this.isVolumeActive;
     if (this.isVolumeActive) {
@@ -49,6 +72,4 @@ export class HandsfreeComponent  implements OnInit {
       this.volumeIcon = 'volume-high-outline';
     }
   } 
-
-
 }

@@ -29,7 +29,31 @@
         </ion-card-header>
     
     <ion-card-content>
+            <!-- Progress bar -->
+      <ion-progress-bar [value]="progress"></ion-progress-bar>
+
+      <ion-list class="ingredient-list">
+        <ion-item>
+          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
+            <div class="ion-text-wrap"> Chopped Pancetta</div>
+          </ion-checkbox>
+        </ion-item>
+        
+        <ion-item>
+          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
+            <div class="ion-text-wrap">Squashed Garlic</div>
+          </ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
+            <div class="ion-text-wrap">Butter</div>
+          </ion-checkbox>
+        </ion-item>
+      </ion-list>
+
+
       <h1>{{ recipeData.instructions[currentStepIndex] }}</h1>
+      
       <ion-grid>
         <ion-row>
           <ion-col>
@@ -46,5 +70,36 @@
       </ion-grid>
     </ion-card-content>
   </ion-card>
+
+    <!-- New ion-card -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{ additionalCardTitle }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="'https://ionicframework.com/docs/img/demos/card-media.png'" alt="Recipe Image" />
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-button expand="block" (click)="handleAction('Previous')" [class.pressed]="pressedButton === 'Previous'">
+              <span class="emoji">👈</span><span>Previous Step</span>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button expand="block" (click)="handleAction('Repeat')" [class.pressed]="pressedButton === 'Repeat'">
+                <span class="emoji">🙌</span><span>Repeat</span>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button expand="block" (click)="handleAction('Next')" [class.pressed]="pressedButton === 'Next'">
+                <span class="emoji">👉</span><span>Next Step</span>    
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+  
 </ion-content>
 
