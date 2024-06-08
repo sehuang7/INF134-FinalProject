@@ -1,21 +1,48 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>{{ recipe.title }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<!-- <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recipe-details</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content> -->
-
-
 <ion-content [fullscreen]="true" class="ion-padding">
   <img [src]="recipe.image" alt="Image of {{recipe.title}}">
   <h2>{{ recipe.title }}</h2>
-  <p>{{ recipe.instructions }}</p>
-  <!-- Add any additional details you want to show -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingredients</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let ingredient of recipe.ingredients_list">
+          <ion-checkbox labelPlacement="end" justify="start">
+            <div class="ion-text-wrap">{{ ingredient }}</div>
+          </ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-toggle label-placement="start" justify="end" (ionChange)="openHandsFreeMode($event)">Hands Free Mode</ion-toggle>
+      <ion-card-title>Step by step instructions</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let instruction of recipe.instructions">
+          <ion-checkbox labelPlacement="end">
+            <div class="ion-text-wrap">{{ instruction }}</div>
+          </ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <ion-button expand="full" (click)="goHome()">Done</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>

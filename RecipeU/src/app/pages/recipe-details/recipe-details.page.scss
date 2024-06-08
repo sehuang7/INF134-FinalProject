@@ -1,0 +1,14 @@
+ion-card {
+    margin-bottom: 40px; /* Adjust the space as needed */
+  }
+
+ion-item {
+    --inner-padding-end: 0; /* Reduce padding on the end side */
+    --inner-padding-start: 0; /* Reduce padding on the start side */
+  }
+  
+  ion-checkbox {
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word; /* Ensure words break properly to next line */
+  }
