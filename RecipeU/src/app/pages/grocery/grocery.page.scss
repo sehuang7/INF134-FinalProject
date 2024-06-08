@@ -3,7 +3,7 @@ ion-content {
 }
 
 h1 {
-    padding-top: 56px;
+padding-top: 56px;
   margin-left: 16px;
   font-weight: normal;
   font-size: 24px;
@@ -50,12 +50,23 @@ h1 {
         // overflow: hidden;
         // overflow-y: auto;
         // white-space: nowrap;
-
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            border-radius: 8px;
+          }
         ion-card {
             --background: white;
             width: 100px;
             height: 100px;
             margin: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+            ion-card-header {
+                padding-top: 0;
+                padding-left: 0;
+            }
         }
     }
 }
@@ -82,49 +93,24 @@ h1 {
             // overflow: hidden;
             // overflow-y: auto;
             // white-space: nowrap;
-    
+            img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+
             ion-card {
                 width: 100px;
                 height: 100px;
                 margin: 8px;
                 --background: white;
+                overflow: hidden;
+                white-space: nowrap;
+                ion-card-header {
+                    padding-top: 0;
+                    padding-left: 0;
+                }
             }
         }
-}
-
-ion-modal {
-    --border-radius: 20px;
-    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --height: 50%;
-    --width: 90%;
-}
-
-
-ion-modal ion-toolbar {
-    --background: #A4C2A8;
-    --color: black;
-    
-  }
-
-#modal {
-    --background: #A4C2A8;
-
-}
-
-
-#quant-picker {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 40px;
-    height: 40px;
-
-
-    ion-input {
-        width: 40px;
-        background-color: white;
-        border-radius: 10px;
-        height: 40px;
-        margin-top: 5px;
-    }
-
 }
