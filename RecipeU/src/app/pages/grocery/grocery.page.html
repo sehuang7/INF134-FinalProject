@@ -18,10 +18,12 @@
         <ion-card-title>Fridge</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-card *ngFor="let item of fridgeItems">
-          <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>{{item.name}}</ion-card-header>
-        </ion-card>
+        <ng-container *ngFor="let item of allItems">
+          <ion-card *ngIf="item.type ==='Fridge Item'">
+            <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>{{item.name}}</ion-card-header>
+          </ion-card>
+        </ng-container>
       </ion-card-content>
 
     </ion-card>
@@ -33,10 +35,12 @@
         <ion-card-title>Pantry</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-card *ngFor="let item of pantryItems">
-          <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-          <ion-card-header>{{item.name}}</ion-card-header>
-        </ion-card>
+        <ng-container *ngFor="let item of allItems">
+          <ion-card *ngIf="item.type === 'Pantry/Cabinet Item'">
+            <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>{{item.name}}</ion-card-header>
+          </ion-card>
+        </ng-container>
       </ion-card-content>
 
     </ion-card>

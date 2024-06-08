@@ -21,8 +21,8 @@ export class GroceryPage implements OnInit {
   ngOnInit() {
     this.allItems = this.recipeService.getAllItems();
    
-    this.fridgeItems = this.allItems.filter(item => item.type === 'Fridge Item');
-    this.pantryItems = this.allItems.filter(item => item.type === 'Pantry/Cabinet Item');
+    // this.fridgeItems = this.allItems.filter(item => item.type === 'Fridge Item');
+    // this.pantryItems = this.allItems.filter(item => item.type === 'Pantry/Cabinet Item');
     console.log(this.allItems);
     console.log(this.fridgeItems);
   }
