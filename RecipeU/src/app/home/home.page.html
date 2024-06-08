@@ -1,7 +1,14 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
 
 <ion-content [fullscreen]="true" class="ion-padding">
     <h1>Welcome Back, [User]</h1>
-    
+
     <div id="low-in-stock">
       <ion-card>
         <ion-card-header>
@@ -9,11 +16,15 @@
         </ion-card-header>
         <ion-card-content>
           <ion-card *ngFor="let item of lowInStock">
+            <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
             <ion-card-header>
               <ion-card-title>{{item.name}}</ion-card-title>
-              <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
-              <ion-card-subtitle>{{item.unit}}</ion-card-subtitle>
+              <!-- <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
+              <ion-card-subtitle>{{item.unit}}</ion-card-subtitle> -->
             </ion-card-header>
+            <ion-card-content>
+              {{item.quantity}} {{item.unit}}
+            </ion-card-content>
           </ion-card>
 
         </ion-card-content>
@@ -27,12 +38,13 @@
         </ion-card-header>
         <ion-card-content>
           <ion-card *ngFor="let recipe of recipes">
+            <img alt="Image of {{recipe.title}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
             <ion-card-header>
               <ion-card-title>{{recipe.title}}</ion-card-title>
             </ion-card-header>
-            <ion-card-content>
+            <!-- <ion-card-content>
               [Short Recipe Description goes here]
-            </ion-card-content>
+            </ion-card-content> -->
           </ion-card>
 
         </ion-card-content>
