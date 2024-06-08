@@ -1,86 +1,44 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>grocery</ion-title>
+  </ion-toolbar>
+</ion-header> -->
 
 <ion-content [fullscreen]="true">
   <div id="Add-Items">
     <h1>Groceries</h1>
-    <ion-button shape="round" id="add-groceries" expand="block">
+    <ion-button shape="round">
       <ion-icon slot="icon-only" name="add"></ion-icon>
     </ion-button>
   </div>
 
   <div id="Fridge">
-    <h1>Fridge</h1>
     <ion-card>
+      <ion-card-header>
+        <ion-card-title>Fridge</ion-card-title>
+      </ion-card-header>
       <ion-card-content>
-        <ng-container *ngFor="let item of allItems">
-          <ion-card *ngIf="item.type === 'Fridge Item'">
-            {{item.name}}
-          </ion-card>
-        </ng-container>
-
+        <ion-card *ngFor="let item of fridgeItems">
+          <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>{{item.name}}</ion-card-header>
+        </ion-card>
       </ion-card-content>
 
     </ion-card>
   </div>
 
   <div id="Pantry">
-    <h1>Pantry/Cabinet</h1>
-    <ion-card>   
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Pantry</ion-card-title>
+      </ion-card-header>
       <ion-card-content>
-        <ng-container *ngFor="let item of allItems">
-          <ion-card *ngIf="item.type === 'Pantry/Cabinet Item'">
-            {{item.name}}
-          </ion-card>
-        </ng-container>
+        <ion-card *ngFor="let item of pantryItems">
+          <img alt="Image of {{item.name}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>{{item.name}}</ion-card-header>
+        </ion-card>
       </ion-card-content>
 
     </ion-card>
   </div>
-
-  <ion-modal #modal trigger="add-groceries" id="add-groceries">
-    <ng-template>
-      <ion-content id="modal">
-        <ion-toolbar>
-          <ion-title>Add Grocery Item</ion-title>
-          <ion-buttons slot="start">
-            <ion-button color="dark" (click)="modal.dismiss()">Close</ion-button>
-          </ion-buttons>
-        </ion-toolbar>
-
-        <ion-list>
-          <ion-radio-group>
-            <ion-item>
-              <ion-radio>Fridge</ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-radio>Pantry</ion-radio>
-            </ion-item>
-          </ion-radio-group>
-        </ion-list>
-
-        <h2>Quantity</h2>
-
-        <div id="quant-picker">
-          <ion-button><ion-icon name="remove"></ion-icon></ion-button> 
-          <ion-input></ion-input>
-          <ion-button><ion-icon name="add"></ion-icon></ion-button>
-        </div>
-
-        <br>
-        
-        <ion-list>
-          <ion-item>
-            <ion-select aria-label="Unit of Measure" value="ct">
-              <ion-select-option value="oz">oz</ion-select-option>
-              <ion-select-option value="lbs">lbs</ion-select-option>
-              <ion-select-option value="ct">ct</ion-select-option>
-            </ion-select>
-          </ion-item>
-        </ion-list>
-        
-        <br>
-        <ion-button>Add Item</ion-button>
-
-      </ion-content>
-    </ng-template>
-  </ion-modal>
 </ion-content>
