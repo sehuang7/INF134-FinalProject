@@ -1,0 +1,17 @@
+
+#quant-picker {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 40px;
+    height: 40px;
+
+
+    ion-input {
+        width: 40px;
+        background-color: white;
+        border-radius: 10px;
+        height: 40px;
+        margin-top: 5px;
+    }
+
+}

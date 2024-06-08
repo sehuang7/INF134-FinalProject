@@ -7,8 +7,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HandsfreeComponent } from './handsfree/handsfree.component';
 
+import { AddGroceriesComponent } from './modals/add-groceries/add-groceries.component';
+import { UpdateGroceriesComponent } from './modals/update-groceries/update-groceries.component';
+
 @NgModule({
-  declarations: [AppComponent, HandsfreeComponent],
+  declarations: [AppComponent, HandsfreeComponent, AddGroceriesComponent, UpdateGroceriesComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

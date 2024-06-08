@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Add Grocery</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="https://ionicframework.com/docs/img/demos/card-media.png"/>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-item>
+        <ion-radio>Fridge</ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-radio>Pantry</ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <h2>Quantity</h2>
+
+  <div id="quant-picker">
+    <ion-button><ion-icon name="remove"></ion-icon></ion-button> 
+    <ion-input placeholder="0"></ion-input>
+    <ion-button><ion-icon name="add"></ion-icon></ion-button>
+  </div>
+
+  <br>
+  
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="Unit of Measure" value="ct">
+        <ion-select-option value="oz">oz</ion-select-option>
+        <ion-select-option value="lbs">lbs</ion-select-option>
+        <ion-select-option value="ct">ct</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  
+  <br>
+  <ion-button>Add Item</ion-button>
+
+</ion-content>

@@ -35,3 +35,20 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+/* In src/global.scss or your component's CSS file */
+.grocery-modal {
+    --width: 90%; /* Custom width */
+    --height: 80%; /* Custom height */
+    --border-radius: 10px;
+    --max-width: 500px;
+    --max-height: 700px;
+    margin: auto;
+  }
+  
+  /* Optional: Customize the modal's content padding */
+  .custom-modal .modal-wrapper {
+    padding: 1rem;
+  }
+  
