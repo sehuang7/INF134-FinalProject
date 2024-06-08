@@ -37,7 +37,7 @@
           <ion-card-title>Recommended Recipes</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-card *ngFor="let recipe of recipes">
+          <ion-card *ngFor="let recipe of recipes" (click)="openRecipeDetails(recipe.id)">
             <img alt="Image of {{recipe.title}}" src="https://ionicframework.com/docs/img/demos/card-media.png" />
             <ion-card-header>
               <ion-card-title>{{recipe.title}}</ion-card-title>

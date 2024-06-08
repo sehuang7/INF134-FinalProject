@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RecipeService } from '../services/recipe.service';
 import { ItemData } from '../data/item-data';
 import { RecipeData } from '../data/recipe-data';
@@ -13,8 +14,8 @@ export class HomePage implements OnInit {
   public lowInStock:ItemData[] = [];
   public recipes:RecipeData[] = []
 
-  constructor(public recipeService:RecipeService) {
-
+  constructor(public recipeService:RecipeService, private router:Router) {
+    
   }
 
   ngOnInit() {
@@ -22,4 +23,8 @@ export class HomePage implements OnInit {
       this.recipes = this.recipeService.getAllRecipes();
   }
   
+  openRecipeDetails(id: string) {
+    this.router.navigate(['/recipe-details', id]);
+  }
+
 }

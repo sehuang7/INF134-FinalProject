@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ recipe.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">recipe-details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content> -->
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <img [src]="recipe.image" alt="Image of {{recipe.title}}">
+  <h2>{{ recipe.title }}</h2>
+  <p>{{ recipe.instructions }}</p>
+  <!-- Add any additional details you want to show -->
+</ion-content>
