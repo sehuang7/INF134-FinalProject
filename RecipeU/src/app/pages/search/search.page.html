@@ -14,8 +14,20 @@
 
   <div id="match-recipe">
     <ion-card>
+      <ion-card-title>Perfect Match!</ion-card-title>
+      <ion-card-content>This recipe uses the below ingredients low on stock or close to expiry, finishing most of them.
+        <br>
+      <label><input type="checkbox" checked> 500g chicken breasts </label><br>
+      <label><input type="checkbox" checked> 150 ml yogurt </label><br>
+      <label><input type="checkbox" checked> 400g can tomatoes </label>
+      </ion-card-content>
       <ion-card-content>
-        insert content here
+        <ion-card (click)="openRecipe()"> 
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <ion-card-header>
+            <ion-card-title>Recipe</ion-card-title>
+          </ion-card-header>
+        </ion-card>
       </ion-card-content>
     </ion-card>
   </div>
@@ -25,7 +37,7 @@
 
     <ion-card>
       <ion-card-content>
-        <ion-card *ngFor="let cat of categories">
+        <ion-card *ngFor="let cat of categories; let i = index" [ngStyle]="{'background-image': 'url(' + categoriesImages[i] + ')'}">
           <ion-card-title>{{cat}}</ion-card-title>
         </ion-card>
       </ion-card-content>
