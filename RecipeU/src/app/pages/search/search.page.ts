@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RecipeService } from 'src/app/services/recipe.service';
+import { ModalController } from '@ionic/angular';
+import { RecipeData } from 'src/app/data/recipe-data';
 
 @Component({
   selector: 'app-search',
@@ -15,16 +18,17 @@ export class SearchPage implements OnInit {
     "https://spicysouthernkitchen.com/wp-content/uploads/tofu-13.jpg", "https://assets.bonappetit.com/photos/61b775620fb3fcc4cbf036c1/master/pass/20211208%20Spaghetti%20Squash%20with%20Tomato%20Sauce%20and%20Mozarella%20LEDE.jpg",
     "https://www.bhg.com/thmb/o3xhK7m47y_mJU4igtWto9pzenc=/1244x0/filters:no_upscale():strip_icc()/pan-seared-salmon-tomato-pesto-RU233499-573087205ee74d19a20b3a9c1e1366bc.jpg"
     ]
+  public recipes:RecipeData[] =[];
 
-  constructor(public recipeService:RecipeService) { }
+  constructor(public recipeService:RecipeService, private router:Router, private modalController:ModalController) { }
 
   ngOnInit() {
     this.categories = this.recipeService.getAllCategories();
-    //this.categoryimgs = this.recipeService.getAllCategoryImages();
+    this.recipes = this.recipeService.getAllRecipes();
   }
 
   public openRecipe() {
-    console.log("open");
+    this.router.navigate(['/recipe-details', 1]);
   }
 
 }
