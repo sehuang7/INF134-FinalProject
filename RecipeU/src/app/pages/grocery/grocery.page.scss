@@ -5,8 +5,9 @@ ion-content {
 h1 {
 padding-top: 56px;
   margin-left: 16px;
-  font-weight: normal;
+  font-weight: bold;
   font-size: 24px;
+  color: black;
 }
 
 #Add-Items {
@@ -42,6 +43,7 @@ padding-top: 56px;
 
     ion-card-title {
         font-size: 20px;
+        color: black;
     }
 
     ion-card-content {
@@ -66,6 +68,7 @@ padding-top: 56px;
             ion-card-header {
                 padding-top: 0;
                 padding-left: 0;
+                color: black;
             }
         }
     }
@@ -85,6 +88,7 @@ padding-top: 56px;
     
         ion-card-title {
             font-size: 20px;
+            color: black;
         }
     
         ion-card-content {
@@ -110,6 +114,7 @@ padding-top: 56px;
                 ion-card-header {
                     padding-top: 0;
                     padding-left: 0;
+                    color: black;
                 }
             }
         }
