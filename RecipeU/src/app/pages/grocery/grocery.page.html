@@ -19,7 +19,7 @@
       </ion-card-header>
       <ion-card-content>
         <ng-container *ngFor="let item of allItems">
-          <ion-card *ngIf="item.type ==='Fridge Item'" (click)="openUpdateModal()">
+          <ion-card *ngIf="item.type ==='Fridge Item'" (click)="openUpdateModal(item)">
             <img alt="Image of {{item.name}}" src="{{item.image}}" />
             <ion-card-header>{{item.name}}</ion-card-header>
           </ion-card>
@@ -36,7 +36,7 @@
       </ion-card-header>
       <ion-card-content>
         <ng-container *ngFor="let item of allItems">
-          <ion-card *ngIf="item.type === 'Pantry/Cabinet Item'" (click)="openUpdateModal()">
+          <ion-card *ngIf="item.type === 'Pantry/Cabinet Item'" (click)="openUpdateModal(item)">
             <img alt="Image of {{item.name}}" src="{{item.image}}" />
             <ion-card-header>{{item.name}}</ion-card-header>
           </ion-card>

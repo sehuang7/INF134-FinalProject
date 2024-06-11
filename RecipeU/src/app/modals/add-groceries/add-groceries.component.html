@@ -4,9 +4,6 @@
       <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
     </ion-buttons>
     <ion-title>Add Grocery</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -14,13 +11,15 @@
 
   <img src="https://ionicframework.com/docs/img/demos/card-media.png"/>
 
+  <ion-input placeholder="Enter Item Name" [(ngModel)]="item_name"></ion-input>
+
   <ion-list>
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="type">
       <ion-item>
-        <ion-radio>Fridge</ion-radio>
+        <ion-radio value="Fridge">Fridge</ion-radio>
       </ion-item>
       <ion-item>
-        <ion-radio>Pantry</ion-radio>
+        <ion-radio value="Pantry">Pantry</ion-radio>
       </ion-item>
     </ion-radio-group>
   </ion-list>
@@ -28,16 +27,17 @@
   <h2>Quantity</h2>
 
   <div id="quant-picker">
-    <ion-button><ion-icon name="remove"></ion-icon></ion-button> 
-    <ion-input placeholder="0"></ion-input>
-    <ion-button><ion-icon name="add"></ion-icon></ion-button>
+    <ion-button (click)="decrementQuantity()"><ion-icon name="remove"></ion-icon></ion-button> 
+    <!-- <ion-input placeholder="{{quantity}}"></ion-input> -->
+    <ion-input [(ngModel)]="quantity"></ion-input>
+    <ion-button (click)="incrementQuantity()"><ion-icon name="add"></ion-icon></ion-button>
   </div>
 
   <br>
   
   <ion-list>
     <ion-item>
-      <ion-select aria-label="Unit of Measure" value="ct">
+      <ion-select aria-label="Unit of Measure" value="ct" [(ngModel)]="unit">
         <ion-select-option value="oz">oz</ion-select-option>
         <ion-select-option value="lbs">lbs</ion-select-option>
         <ion-select-option value="ct">ct</ion-select-option>
@@ -46,6 +46,6 @@
   </ion-list>
   
   <br>
-  <ion-button>Add Item</ion-button>
+  <ion-button (click)="addItem()">Add Item</ion-button>
 
 </ion-content>

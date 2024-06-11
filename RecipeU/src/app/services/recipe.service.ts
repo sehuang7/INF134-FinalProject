@@ -73,13 +73,22 @@ export class RecipeService {
   }
 
   public removeSavedRecipe(recipe: RecipeData) {
-    console.log("before");
-    console.log(RecipeService.SavedRecipes);
+    // console.log("before");
+    // console.log(RecipeService.SavedRecipes);
     var temp = RecipeService.SavedRecipes.indexOf(recipe);
     // delete RecipeService.SavedRecipes[temp];
     RecipeService.SavedRecipes.splice(temp, 1);
-    console.log("remove");
-    console.log(RecipeService.SavedRecipes);
+  //   console.log("remove");
+  //   console.log(RecipeService.SavedRecipes);
+  }
+
+  public addItem(item: ItemData) {
+    RecipeService.AllItemData.push(item);
+  }
+
+  public removeItem(item: ItemData) {
+    var temp = RecipeService.AllItemData.indexOf(item);
+    RecipeService.AllItemData.splice(temp, 1);
   }
 
   public getAllItems() {

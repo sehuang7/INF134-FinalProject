@@ -4,23 +4,24 @@
       <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
     </ion-buttons>
     <ion-title>Update Grocery</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <img src="https://ionicframework.com/docs/img/demos/card-media.png"/>
+  <img src="{{item.image}}"/>
+  
+  <!-- <img *ngIf="item.image===''" src="https://ionicframework.com/docs/img/demos/card-media.png"/> -->
+  
+  <ion-input placeholder="Enter Item Name" [(ngModel)]="item_name"></ion-input>
 
   <ion-list>
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="type">
       <ion-item>
-        <ion-radio>Fridge</ion-radio>
+        <ion-radio value="Fridge">Fridge</ion-radio>
       </ion-item>
       <ion-item>
-        <ion-radio>Pantry</ion-radio>
+        <ion-radio value="Pantry">Pantry</ion-radio>
       </ion-item>
     </ion-radio-group>
   </ion-list>
@@ -28,16 +29,16 @@
   <h2>Quantity</h2>
 
   <div id="quant-picker">
-    <ion-button><ion-icon name="remove"></ion-icon></ion-button> 
-    <ion-input placeholder="0"></ion-input>
-    <ion-button><ion-icon name="add"></ion-icon></ion-button>
+    <ion-button (click)="decrementQuantity()"><ion-icon name="remove"></ion-icon></ion-button> 
+    <ion-input [(ngModel)]="quantity"></ion-input>
+    <ion-button (click)="incrementQuantity()"><ion-icon name="add"></ion-icon></ion-button>
   </div>
 
   <br>
   
   <ion-list>
     <ion-item>
-      <ion-select aria-label="Unit of Measure" value="ct">
+      <ion-select aria-label="Unit of Measure" value="ct" [(ngModel)]="unit">
         <ion-select-option value="oz">oz</ion-select-option>
         <ion-select-option value="lbs">lbs</ion-select-option>
         <ion-select-option value="ct">ct</ion-select-option>
@@ -46,6 +47,7 @@
   </ion-list>
   
   <br>
-  <ion-button>Add Item</ion-button>
+  <ion-button (click)="updateItem()">Update Item</ion-button>
+  <ion-button (click)="deleteItem()">Delete Item</ion-button>
 
 </ion-content>

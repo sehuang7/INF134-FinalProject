@@ -48,10 +48,11 @@ export class GroceryPage implements OnInit {
     }
   }
 
-  async openUpdateModal() {
+  async openUpdateModal(item: ItemData) {
     const modal = await this.modalController.create({
       component: UpdateGroceriesComponent,
-      cssClass: 'grocery-modal'
+      cssClass: 'grocery-modal',
+      componentProps: {item: item}
     });
     modal.present();
 
