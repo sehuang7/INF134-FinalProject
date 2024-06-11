@@ -19,6 +19,10 @@ export class RecipeService {
     this.addDefaultRecipeData();
     this.addDefaultItemData();
 
+    //FOR TESTING ONLY
+    this.addDefaultSavedData();
+    
+
   }
 
   private addDefaultRecipeData() {
@@ -41,6 +45,19 @@ export class RecipeService {
         var temp = new ItemData(item.name, item.image, item.quantity, item.unit[0], item.type[0]);
         RecipeService.AllItemData.push(temp);
 
+      });
+
+    })
+  }
+
+
+  private addDefaultSavedData() {
+    // Here parse a json file containing all recipes --> recipes.json
+    fetch('./assets/recipes.json').then(res => res.json()).then(json => {
+
+      json.forEach((recipe: any, index: number) => {
+        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions);
+        RecipeService.SavedRecipes.push(temp);
       });
 
     })

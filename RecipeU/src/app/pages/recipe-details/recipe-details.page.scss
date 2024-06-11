@@ -1,6 +1,8 @@
+
+
 ion-card {
-    margin-bottom: 40px; /* Adjust the space as needed */
-  }
+  margin-bottom: 40px; /* Adjust the space as needed */
+}
 
 ion-item {
     --inner-padding-end: 0; /* Reduce padding on the end side */
@@ -15,4 +17,13 @@ ion-item {
 
 ion-icon {
   color: black;
+}
+
+#recipe-title {
+  font-size: 30px;
+}
+
+ion-thumbnail {
+  --size: 160px;
+  --border-radius: 10px;
 }

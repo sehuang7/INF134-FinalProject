@@ -22,4 +22,8 @@ export class BookmarksPage implements OnInit {
     this.router.navigate(['/recipe-details', id]);
   }
 
+  removeBookmark(recipe: RecipeData) {
+    this.recipeService.removeSavedRecipe(recipe);
+  }
+
 }

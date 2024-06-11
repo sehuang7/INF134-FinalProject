@@ -20,5 +20,32 @@ h1 {
         height: 150px;
         width: 150px;
         object-fit: cover;
+        z-index: 0;
     }
+}
+
+.border {
+    position: relative;
+    z-index: 2;
+
+	
+}
+
+.bookmark {
+
+    position: absolute;
+    margin: auto;
+    z-index: 2;
+    top: 20px;
+    left: 25px;
+}
+
+#recipe-image {
+	width: 65%;
+	height: 65%;
+}
+
+ion-icon {
+    color: black; 
+    padding: 5px;
 }

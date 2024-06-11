@@ -36,7 +36,7 @@
   {
     "id":"1",
     "title": "Chicken Curry",
-    "image": "chicken_curry.jpg",
+    "image": "https://www.foodandwine.com/thmb/f4uf4WXHz-waXLB_oqG-U1p4Y7A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/spicy-chicken-curry-FT-RECIPE0321-58f84fdf7b484e7f86894203eb7834e7.jpg",
     "prep_time": "20 minutes",
     "cook_time": "40 minutes",
     "rating": 4.7,
@@ -75,7 +75,7 @@
   {
     "id":"2",
     "title": "Katsu Curry",
-    "image": "",
+    "image": "https://loveandgoodstuff.com/wp-content/uploads/2020/11/pork-katsu-curry-1200x1200-1.jpg",
     "prep_time": "30 minutes",
     "cook_time": "30 minutes",
     "rating": 4.7,
@@ -87,7 +87,7 @@
   {
     "id":"3",
     "title": "Beef Teriyaki with Rice and Edamame",
-    "image": "",
+    "image": "https://www.sugarsaltmagic.com/wp-content/uploads/2024/04/Beef-Teriyaki-Bowls-5.jpg",
     "prep_time": "15 minutes",
     "cook_time": "30 minutes",
     "rating": 4.8,
@@ -99,7 +99,7 @@
   {
     "id":"4",
     "title": "Cheeseburgers",
-    "image": "",
+    "image": "https://www.kitchensanctuary.com/wp-content/uploads/2021/05/Double-Cheeseburger-square-FS-42.jpg",
     "prep_time": "10 minutes",
     "cook_time": "20 minutes",
     "rating": 4.7,
@@ -111,7 +111,7 @@
   {
     "id":"5",
     "title": "Chicken Burrito",
-    "image": "",
+    "image": "https://www.bhg.com/thmb/i9lsx6ETR5FT62pEPHWMRRxH60U=/1244x0/filters:no_upscale():strip_icc()/seven-layer-chicken-burrito-RU358756-af7915c735ff463792ed4f079c2fd3ef.jpg",
     "prep_time": "15 minutes",
     "cook_time": "15 minutes",
     "rating": 4.7,

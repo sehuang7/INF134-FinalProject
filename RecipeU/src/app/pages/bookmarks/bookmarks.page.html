@@ -9,17 +9,26 @@
 
   <div id="saved-list">
   
-    <ion-card *ngFor="let recipe of bookmarked" (click)="openRecipeDetails(recipe.id)">
-      <ion-card-content>
-        <!-- <img src="{{recipe.image}}" /> -->
-        <img alt="PLACEHOLDER" src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&webp=true&resize=700,636">
-        <div>
-          <ion-card-title>{{recipe.title}}</ion-card-title>
-          <p>Prep: {{recipe.prep_time}}</p>
-          <p>Cook: {{recipe.cook_time}}</p>
-        </div>
-      </ion-card-content>
-    </ion-card>
+    <div class="item border" *ngFor="let recipe of bookmarked">
+      <ion-button class="bookmark" fill="clear" (click)="removeBookmark(recipe)">
+        <ion-icon slot="icon-only" name="bookmark" size="large"></ion-icon>
+      </ion-button>
+
+      <ion-card (click)="openRecipeDetails(recipe.id)">
+        <ion-card-content>
+          <!-- <img src="{{recipe.image}}" /> -->
+          
+            
+            <img id="recipe-image" class="padding-bottom" alt="PLACEHOLDER" src="{{recipe.image}}">
+
+          <div>
+            <ion-card-title>{{recipe.title}}</ion-card-title>
+            <p>Prep: {{recipe.prep_time}}</p>
+            <p>Cook: {{recipe.cook_time}}</p>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
     
   </div>
 

@@ -8,11 +8,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-    <img [src]="recipe.image" alt="Image of {{recipe.title}}">
-    
-    <ion-grid> 
+    <ion-grid>
       <ion-row>
-        <ion-col><h2>{{ recipe.title }}</h2></ion-col>
+        <ion-col>
+          <ion-thumbnail>
+            <img [src]="recipe.image" alt="Image of {{recipe.title}}">
+          </ion-thumbnail>
+          
+        </ion-col>
+        <ion-col>
+          <h1 id="recipe-title">{{recipe.title}}</h1>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col><h4>Details</h4></ion-col>
         <ion-col size="auto">
           <div class="ion-align-items-end">
             <ion-button id="bookmark" *ngIf="!inSaved(recipe)" shape="round" fill="clear" (click)="addToSaved(recipe)">
@@ -24,10 +36,6 @@
           </div>
         </ion-col>
       </ion-row>
-    </ion-grid>
-
-    <h4>Details</h4>
-    <ion-grid>
       <ion-row>
         <ion-col>Prep: {{recipe.prep_time}}</ion-col>
         <ion-col>Cook: {{recipe.cook_time}}</ion-col>
