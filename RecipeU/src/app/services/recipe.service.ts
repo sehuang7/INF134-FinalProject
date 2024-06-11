@@ -30,7 +30,7 @@ export class RecipeService {
     fetch('./assets/recipes.json').then(res => res.json()).then(json => {
 
       json.forEach((recipe: any, index: number) => {
-        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions);
+        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions, recipe.contains);
         RecipeService.AllRecipeData.push(temp);
       });
 
@@ -56,7 +56,7 @@ export class RecipeService {
     fetch('./assets/recipes.json').then(res => res.json()).then(json => {
 
       json.forEach((recipe: any, index: number) => {
-        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions);
+        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions, recipe.contains);
         RecipeService.SavedRecipes.push(temp);
       });
 

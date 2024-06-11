@@ -31,7 +31,8 @@
       "Quickly pour in the eggs and cheese, lifting up the spaghetti so it mixes easily.",
       "Add extra pasta cooking water to keep it saucy if necessary.",
       "Serve immediately with a little sprinkling of the remaining cheese and a grating of black pepper."
-    ]
+    ],
+    "contains": "Cheese"
   },
   {
     "id":"1",
@@ -70,7 +71,8 @@
       "Reduce the heat and cook for 20-25 minutes until the chicken is cooked through.",
       "Stir in the yogurt and season with salt and pepper.",
       "Garnish with fresh coriander leaves and serve."
-    ]
+    ],
+    "contains": "Chicken"
   },
   {
     "id":"2",
@@ -80,9 +82,26 @@
     "cook_time": "30 minutes",
     "rating": 4.7,
     "ingredients": [
+      "400g onion", 
+      "250g potato",
+      "100g carrot",
+      "1 tbsp oil",
+      "½ packet of 230g House Vermont Curry", 
+      "800ml water",
+      "4 cups cooked rice",
+      "4 Chicken Cutlets cut into 2.5cm"
     ],
     "instructions": [
-    ]
+      "Add oil to a pot and heat over medium high heat.",
+      "Add onion and sauté for a few minutes or until the onion becomes translucent and edges start getting slightly burnt.",
+      "Add potatoes and carrots into the pot and stir for a couple of minutes or until the surface of the vegetables starts getting cooked.",
+      "Add water and turn the heat up to bring it to a boil. Then reduce the heat to medium low and simmer for about 7 minutes or until the vegetables are nearly cooked through.",
+      "Break the curry roux cake into small blocks along the lines and add them into the pot. Stir gently to blend the curry roux.",
+      "Reduce the heat to low, place a lid on and cook for about 10 minutes or until the curry roux is completely dissolved. Stir occasionally as the curry tends to stick to the bottom of the pot.",
+      "Check the consistency of the sauce. It should be like béchamel sauce. If it's too thick, adjust with some water. If too thin, cook further without the lid. It will thicken when cooled down as well.",
+      "Turn the heat off."
+    ],
+    "contains": "Chicken"
   }, 
   {
     "id":"3",
@@ -92,9 +111,22 @@
     "cook_time": "30 minutes",
     "rating": 4.8,
     "ingredients": [
+      "Chicken Breasts",
+      "Oil",
+      "1/4 cup soy sauce",
+      "1/4 cup water",
+      "2 Tbsp honey",
+      "1 Tbsp rice vinegar",
+      "Edamame"
     ],
     "instructions": [
-    ]
+      "Heat oil in a 12-inch non-stick skillet over medium-high heat.",
+      "Add in chicken and let brown on bottom about 3 - 4 minutes then flip and continue to cook until center registers about 160 degrees, about 3 minutes longer.",
+      "While chicken is cooking, in a small mixing bowl (or liquid measuring cup) whisk together soy sauce, water, honey, brown sugar, rice vinegar, sesame oil, ginger, garlic and cornstarch.",
+      "Stir the sauce in with the cooked chicken and continue to cook and toss until sauce has thickened, about 30 - 60 seconds longer.", 
+      "Serve warm garnished with green onions and sesame seeds if desired."
+    ],
+    "contains": "Beef"
   },
   {
     "id":"4",
@@ -104,9 +136,28 @@
     "cook_time": "20 minutes",
     "rating": 4.7,
     "ingredients": [
+      "600g beef mince (ground beef)",
+      "1/8 tsp each salt and pepper PER burger",
+      "2 - 3 tbsp canola oil",
+      "4 soft burger buns or rolls",
+      "4 - 8 slices burger cheese",
+      "8 cos/romaine lettuce leaves",
+      "2 large tomatoes",
+      "1 red onion",
+      "2 large gherkins"
     ],
     "instructions": [
-    ]
+      "Separate the beef into 4 equal portions, or 8 if making double cheeseburgers (do it!). Gently roll each portion into balls then press down into round patties that are slightly larger than your bun to allow for shrinkage (12 cm / 4.7in wide, 1 cm / 0.4in thick for a 10cm / 4in burger bun).",
+      "Get all your burger bits and pieces out and ready to use. Don't salt your beef until just before cooking (it toughens the meat).",
+      "Preheat the grill to high. Place the bread cut face up on a tray and toast for 3 to 5 minutes until light golden. (If using BBQ, place cut face down on the grill). Set aside.",
+      "Sprinkle one side of patties with half the salt and pepper. Flip, then press a dent into the middle of each patty. (Prevents patties doming when cooking and reduces shrinkage!). Sprinkle this dented side with the remaining salt and pepper.",
+      "Preheat 1 tablespoon oil in a large cast iron skillet over high heat until very hot - smoking hot!",
+      "Cook 2 to 4 patties (whatever fits in the pan) for 1 1/2 minutes. Press down lightly with a spatula (not too hard else the meat juices squeeze out!). Flip, then immediately top with a slice of cheese. Cook for another 1 1/2 minutes (cheese will melt by itself!) then transfer burgers to a tray to rest for 3 minutes.",
+      "If your BBQ hot plate/grill is well seasoned (ie oiled), there is no need to oil before cooking. If not, lightly brush with vegetable or canola oil (or use scrunched up paper towel). Then preheat your BBQ on high until very hot and you see wisps of smoke.",
+      "Cook the burgers per above directions for 1 1/2 minutes on each side, topping with cheese as soon as you flip, then resting for 3 minutes. (You can also toast the buns on the grill (face down on the grills, 2 - 3 minutes.)",
+      "Slather the base of the bun with your sauce of choice. My order of assembly: lettuce, tomato, burger (x 2 for double!), gherkins, onion, sauce on bun lid, jam it on top of the stack."
+    ],
+    "contains": "Beef"
   }, 
   {
     "id":"5",
@@ -116,8 +167,36 @@
     "cook_time": "15 minutes",
     "rating": 4.7,
     "ingredients": [
+      "5 tortillas",
+      "1 tsp each onion powder, dried oregano, salt",
+      "2 tbsp each dried cumin powder, paprika",
+      "1/4 tsp black pepper",
+      "3/4 tsp cayenne pepper",
+      "600g chicken breast",
+      "2 tbsp olive oil",
+      "1/2 onion",
+      "2 garlic cloves",
+      "1 red capsicum/bell pepper",
+      "400g refried beans",
+      "1/4 cup water",
+      "2.5 cups white or mexican red rice",
+      "400g canned corn",
+      "1.5 cups cheese",
+      "1/4 cup cilantro",
+      "avocado sauce (optional)",
+      "sour cream (optional)",
+      "salsa (optional)"
     ],
     "instructions": [
-    ]
+      "Mix Seasoning ingredients. Drizzle 1 tbsp oil over chicken, mix to coat. Sprinkle with Seasoning, toss to coat.",
+      "Heat 1 tbsp oil in a large skillet over high heat. Add chicken, cook 2 minutes. Turn and cook 1.5 minutes. Remove, rest 2 minutes then chop.",
+      "In the same skillet, add onion and garlic, cook 1 minute. Add capsicum, cook 2 minutes until onion is translucent.",
+      "Add refried beans, diced chicken and water. Stir and cook for 2 minutes until reduces slightly. Should be thick and juicy, not watery and not dry/stodgy! Let cool 5 minutes - will thicken.",
+      "Gently warm tortillas in microwave (makes them pliable), lay on work surface.",
+      "Place rice on lower third, top with Chicken Filling, corn, cheese then sprinkle with coriander. Fold up, burrito style.",
+      "Either pan fry over medium high heat (no oil) for 2 minutes each side to make tortilla crispy and melt cheese a bit OR wrap tightly in foil and bake in oven 10 minutes at 180°C/350°F.",
+      "Dunk in sauce(s) of choice or douse with hot sauce of choice, and devour! Suggestions: Avocado Sauce, Guacamole, sour cream, Restaurant Style Salsa, Queso, Nacho Cheese Dip."
+    ],
+    "contains": "Chicken"
   }
 ]
