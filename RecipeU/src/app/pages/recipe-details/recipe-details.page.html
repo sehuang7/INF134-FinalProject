@@ -8,41 +8,71 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <img [src]="recipe.image" alt="Image of {{recipe.title}}">
-  <h2>{{ recipe.title }}</h2>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Ingredients</ion-card-title>
-    </ion-card-header>
+    <img [src]="recipe.image" alt="Image of {{recipe.title}}">
+    
+    <ion-grid> 
+      <ion-row>
+        <ion-col><h2>{{ recipe.title }}</h2></ion-col>
+        <ion-col size="auto">
+          <div class="ion-align-items-end">
+            <ion-button id="bookmark" *ngIf="!inSaved(recipe)" shape="round" fill="clear" (click)="addToSaved(recipe)">
+              <ion-icon slot="icon-only" name="bookmark-outline" size="large"></ion-icon>
+            </ion-button>
+            <ion-button id="bookmark" *ngIf="inSaved(recipe)" shape="round" fill="clear" (click)="removeFromSaved(recipe)">
+              <ion-icon slot="icon-only" name="bookmark" size="large"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-    <ion-card-content>
-      <ion-list>
-        <ion-item *ngFor="let ingredient of recipe.ingredients_list">
-          <ion-checkbox labelPlacement="end" justify="start">
-            <div class="ion-text-wrap">{{ ingredient }}</div>
-          </ion-checkbox>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+    <h4>Details</h4>
+    <ion-grid>
+      <ion-row>
+        <ion-col>Prep: {{recipe.prep_time}}</ion-col>
+        <ion-col>Cook: {{recipe.cook_time}}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>Rating: {{recipe.rating}}/5</ion-col>
+        <ion-col>Contains: </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-toggle label-placement="start" justify="end" (ionChange)="openHandsFreeMode($event)">Hands Free Mode</ion-toggle>
-      <ion-card-title>Step by step instructions</ion-card-title>
-    </ion-card-header>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Ingredients</ion-card-title>
+      </ion-card-header>
 
-    <ion-card-content>
-      <ion-list>
-        <ion-item *ngFor="let instruction of recipe.instructions">
-          <ion-checkbox labelPlacement="end">
-            <div class="ion-text-wrap">{{ instruction }}</div>
-          </ion-checkbox>
-        </ion-item>
-      </ion-list>
-      <ion-button expand="full" (click)="goHome()">Done</ion-button>
-    </ion-card-content>
-  </ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let ingredient of recipe.ingredients_list">
+            <ion-checkbox labelPlacement="end" justify="start">
+              <div class="ion-text-wrap">{{ ingredient }}</div>
+            </ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-toggle label-placement="start" justify="end" (ionChange)="openHandsFreeMode($event)">Hands Free Mode</ion-toggle>
+        <ion-card-title>Step by step instructions</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let instruction of recipe.instructions">
+            <ion-checkbox labelPlacement="end">
+              <div class="ion-text-wrap">{{ instruction }}</div>
+            </ion-checkbox>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="full" (click)="goHome()">Done</ion-button>
+      </ion-card-content>
+    </ion-card>
+  
+  
 
 
 </ion-content>

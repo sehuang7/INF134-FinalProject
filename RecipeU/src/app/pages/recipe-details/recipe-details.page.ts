@@ -41,10 +41,24 @@ export class RecipeDetailsPage implements OnInit {
   ngOnInit() {
     const recipeId = this.route.snapshot.paramMap.get('id'); // Get the recipe ID from the route
     this.recipe = this.recipeService.getRecipeById(recipeId as string); // Fetch the recipe details using the ID
+    console.log(this.recipe);
+    console.log(RecipeService.SavedRecipes);
   }
   
   goHome() {
     this.router.navigate(['/']); // Navigate to home page
+  }
+
+  inSaved(recipe:RecipeData) {  
+    return this.recipeService.getAllSavedRecipes().includes(recipe);
+  }
+
+  addToSaved(recipe:RecipeData) {
+    this.recipeService.addSavedRecipe(recipe);
+  }
+
+  removeFromSaved(recipe:RecipeData) {
+    this.recipeService.removeSavedRecipe(recipe);
   }
 
   async openHandsFreeMode(event: any) {

@@ -27,4 +27,12 @@ export class HomePage implements OnInit {
     this.router.navigate(['/recipe-details', id]);
   }
 
+  addToSaved(recipe: RecipeData) {
+    
+  }
+
+  removeFromSaved(recipe: RecipeData) {
+    
+  }
+
 }

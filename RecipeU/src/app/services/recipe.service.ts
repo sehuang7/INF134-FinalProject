@@ -18,7 +18,6 @@ export class RecipeService {
   constructor() {
     this.addDefaultRecipeData();
     this.addDefaultItemData();
-    this.addDefaultSavedRecipes();
 
   }
 
@@ -47,23 +46,23 @@ export class RecipeService {
     })
   }
 
-  private addDefaultSavedRecipes() {
-    fetch('./assets/recipes.json').then(res => res.json()).then(json => {
-
-      json.forEach((recipe: any, index: number) => {
-        var temp = new RecipeData(recipe.id,recipe.title, recipe.image, recipe.prep_time, recipe.cook_time, recipe.rating, recipe.ingredients, recipe.instructions);
-        RecipeService.SavedRecipes.push(temp);
-      });
-
-    })
-  }
-
   getRecipeById(id: string): RecipeData {
     return RecipeService.AllRecipeData.find(recipe => recipe.id === id) as RecipeData;
   }
 
-  public addSavedRecipe() {
+  public addSavedRecipe(recipe: RecipeData) {
+    RecipeService.SavedRecipes.push(recipe);
+    console.log("save");
+  }
 
+  public removeSavedRecipe(recipe: RecipeData) {
+    console.log("before");
+    console.log(RecipeService.SavedRecipes);
+    var temp = RecipeService.SavedRecipes.indexOf(recipe);
+    // delete RecipeService.SavedRecipes[temp];
+    RecipeService.SavedRecipes.splice(temp, 1);
+    console.log("remove");
+    console.log(RecipeService.SavedRecipes);
   }
 
   public getAllItems() {

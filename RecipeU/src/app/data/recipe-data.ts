@@ -1,5 +1,4 @@
 
-
 export class RecipeData {
     
     id:string;

@@ -15,7 +15,7 @@ export class BookmarksPage implements OnInit {
   constructor(public recipeService:RecipeService, private router:Router) { }
 
   ngOnInit() {
-    this.bookmarked = this.recipeService.getAllSavedRecipes();
+    this.bookmarked = RecipeService.SavedRecipes;
   }
 
   openRecipeDetails(id: string) {
