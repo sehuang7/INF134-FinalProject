@@ -74,4 +74,19 @@ export class UpdateGroceriesComponent implements OnInit{
       this.quantity -= 1;
     }
   }
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        const image = document.getElementById('uploadedImage') as HTMLImageElement;
+        image.src = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
 }
+
