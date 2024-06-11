@@ -23,9 +23,9 @@
       </ion-card-content>
       <ion-card-content>
         <ion-card (click)="openRecipe()"> 
-          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+          <img alt="{{recipes[1].title}}" src="{{recipes[1].image}}" />
           <ion-card-header>
-            <ion-card-title>Recipe</ion-card-title>
+            <ion-card-title>{{recipes[1].title}}</ion-card-title>
           </ion-card-header>
         </ion-card>
       </ion-card-content>
