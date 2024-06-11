@@ -1,0 +1,79 @@
+[
+    {
+        "name": "Cucumber",
+        "image": "https://snaped.fns.usda.gov/sites/default/files/seasonal-produce/2018-05/cucumbers2.jpg",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Eggs",
+        "image": "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Scallions",
+        "image": "https://www.grocery.coop/sites/default/files/styles/amp_metadata_content_image_min_696px_wide/public/wp-content/uploads/2011/06/Scallions_0.jpg?itok=05jH0r1W",
+        "quantity": "2",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Edamame",
+        "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2022/12/13/cooked-edamame-with-salt-on-white-dish-and-white-background.jpg.rend.hgtvcom.1280.720.suffix/1670953033613.jpeg",
+        "quantity": "1",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "American Cheese",
+        "image": "https://www.allrecipes.com/thmb/iRcip7RaCHF_RmbzDV4bC8gqNYs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-504780334-2000-1caaee9e697c40a8935db7b8d9818a85.jpg",
+        "quantity": "3",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    },
+    {
+        "name": "Beef",
+        "image": "https://cdn.britannica.com/68/143268-050-917048EA/Beef-loin.jpg",
+        "quantity": "0.5",
+        "unit": [1, "lbs"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "Teriyaki Sauce",
+        "image": "https://i5.walmartimages.com/seo/Kikkoman-Teriyaki-Marinade-Sauce-15-oz_6b44db1f-02f9-4442-8346-26142999d447_1.a4eafd512cf093b3fff9783d5362209e.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+        "quantity": "50",
+        "unit": [0, "oz"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "Carrots",
+        "image": "https://thumbs.dreamstime.com/b/%C3%B1%20arrot-daucus-carota-subsp-sativus-root-vegetable-usually-orange-colour-100178121.jpg",
+        "quantity": "10",
+        "unit": [2, "ct"],
+        "type": [0, "Fridge"]
+    }, 
+    {
+        "name": "White Bread",
+        "image": "https://www.allrecipes.com/thmb/CjzJwg2pACUzGODdxJL1BJDRx9Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6788-amish-white-bread-DDMFS-4x3-6faa1e552bdb4f6eabdd7791e59b3c84.jpg",
+        "quantity": "2",
+        "unit": [2, "ct"],
+        "type": [1, "Pantry/Cabinet"]
+    }, 
+    {
+        "name": "Banana",
+        "image": "https://images.immediate.co.uk/production/volatile/sites/30/2017/01/Bunch-of-bananas-67e91d5.jpg?quality=90&resize=440,400",
+        "quantity": "4",
+        "unit": [2, "ct"],
+        "type": [1, "Pantry/Cabinet"]
+    }, 
+    {
+        "name": "Jasmine Rice",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/2014_uncooked_Thai_jasmine_rice.jpg",
+        "quantity": "20",
+        "unit": [1, "lbs"],
+        "type": [1, "Pantry/Cabinet"]
+    }
+]
