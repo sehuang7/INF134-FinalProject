@@ -15,6 +15,7 @@ export class UpdateGroceriesComponent implements OnInit{
   @Input() item: any;
 
   item_name: string = "";
+  image: string = "";
   type: string = "";
   quantity: number = 1; 
   unit: string = "ct";
@@ -49,6 +50,7 @@ export class UpdateGroceriesComponent implements OnInit{
     this.item.name = this.item_name;
     this.item.quantity = this.quantity;
     this.item.unit = this.unit;
+    this.item.image = this.image;
 
     if (this.type === "Fridge") {
       this.item.type = "Fridge Item";
@@ -74,6 +76,7 @@ export class UpdateGroceriesComponent implements OnInit{
       this.quantity -= 1;
     }
   }
+
   onFileSelected(event: Event) {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
@@ -83,6 +86,7 @@ export class UpdateGroceriesComponent implements OnInit{
       reader.onload = (e: any) => {
         const image = document.getElementById('uploadedImage') as HTMLImageElement;
         image.src = e.target.result;
+        this.image = image.src;
       };
 
       reader.readAsDataURL(file);
