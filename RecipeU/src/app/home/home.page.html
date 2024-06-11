@@ -7,7 +7,7 @@
 </ion-header> -->
 
 <ion-content [fullscreen]="true" class="ion-padding">
-    <h1>Welcome Back, [User]</h1>
+    <h1>Welcome Back, User</h1>
 
     <div id="low-in-stock">
       <ion-card>
@@ -15,17 +15,19 @@
           <ion-card-title>Low in Stock</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <ion-card *ngFor="let item of lowInStock">
-            <img alt="Image of {{item.name}}" src="{{item.image}}" />
-            <ion-card-header>
-              <ion-card-title>{{item.name}}</ion-card-title>
-              <!-- <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
-              <ion-card-subtitle>{{item.unit}}</ion-card-subtitle> -->
-            </ion-card-header>
-            <ion-card-content>
-              {{item.quantity}} {{item.unit}}
-            </ion-card-content>
-          </ion-card>
+          <ng-container *ngFor="let item of lowInStock">
+            <ion-card *ngIf="1 >= item.quantity" (click)="openUpdateModal(item)">
+              <img alt="Image of {{item.name}}" src="{{item.image}}" />
+              <ion-card-header>
+                <ion-card-title>{{item.name}}</ion-card-title>
+                <!-- <ion-card-subtitle>{{item.quantity}}</ion-card-subtitle>
+                <ion-card-subtitle>{{item.unit}}</ion-card-subtitle> -->
+              </ion-card-header>
+              <ion-card-content>
+                {{item.quantity}} {{item.unit}}
+              </ion-card-content>
+            </ion-card>
+          </ng-container>
 
         </ion-card-content>
       </ion-card>

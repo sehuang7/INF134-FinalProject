@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { RecipeService } from '../services/recipe.service';
 import { ItemData } from '../data/item-data';
 import { RecipeData } from '../data/recipe-data';
+import { ModalController } from '@ionic/angular';
+import { UpdateGroceriesComponent } from '../modals/update-groceries/update-groceries.component';
 
 @Component({
   selector: 'app-home',
@@ -12,9 +14,11 @@ import { RecipeData } from '../data/recipe-data';
 export class HomePage implements OnInit {
 
   public lowInStock:ItemData[] = [];
-  public recipes:RecipeData[] = []
+  public recipes:RecipeData[] = [];
 
-  constructor(public recipeService:RecipeService, private router:Router) {
+  message = 'This modal example uses the modalController to present and dismiss modals.';
+
+  constructor(public recipeService:RecipeService, private router:Router, private modalController:ModalController) {
     
   }
 
@@ -27,12 +31,19 @@ export class HomePage implements OnInit {
     this.router.navigate(['/recipe-details', id]);
   }
 
-  addToSaved(recipe: RecipeData) {
-    
-  }
+  async openUpdateModal(item: ItemData) {
+    const modal = await this.modalController.create({
+      component: UpdateGroceriesComponent,
+      cssClass: 'grocery-modal',
+      componentProps: {item: item}
+    });
+    modal.present();
 
-  removeFromSaved(recipe: RecipeData) {
-    
+    const { data, role } = await modal.onWillDismiss();
+
+    if (role === 'confirm') {
+      this.message = `Hello, ${data}!`;
+    }
   }
 
 }

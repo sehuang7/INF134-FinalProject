@@ -19,7 +19,6 @@ export class GroceryPage implements OnInit {
 
   message = 'This modal example uses the modalController to present and dismiss modals.';
 
-
   constructor(public recipeService:RecipeService, private modalController: ModalController) { 
 
   }

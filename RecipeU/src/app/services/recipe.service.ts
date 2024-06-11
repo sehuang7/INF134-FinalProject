@@ -20,7 +20,7 @@ export class RecipeService {
     this.addDefaultItemData();
 
     //FOR TESTING ONLY
-    this.addDefaultSavedData();
+    // this.addDefaultSavedData();
     
 
   }
