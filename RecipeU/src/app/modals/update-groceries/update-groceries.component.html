@@ -9,7 +9,11 @@
 
 <ion-content>
 
-  <img src="{{item.image}}"/>
+  <input type="file" id="fileInput" hidden (change)="onFileSelected($event)" />
+  <!-- //<img src="{{item.image}}"/> -->
+  <label for="fileInput">
+    <img id="uploadedImage" src="{{item.image}}" />
+  </label>
   
   <!-- <img *ngIf="item.image===''" src="https://ionicframework.com/docs/img/demos/card-media.png"/> -->
   
