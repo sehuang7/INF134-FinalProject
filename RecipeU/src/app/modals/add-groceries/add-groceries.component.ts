@@ -59,7 +59,8 @@ export class AddGroceriesComponent {
       tempUnit = 2;
     }
 
-    var image = "https://ionicframework.com/docs/img/demos/card-media.png";
+    const imageElement = document.getElementById('uploadedImage') as HTMLImageElement;
+    const image = imageElement ? imageElement.src : 'https://ionicframework.com/docs/img/demos/card-media.png';
     
     var item = new ItemData(this.item_name, image, this.quantity, tempUnit, tempType);
     console.log(item);
@@ -68,5 +69,22 @@ export class AddGroceriesComponent {
     this.cancel();
 
   }
+
+  onFileSelected(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        const image = document.getElementById('uploadedImage') as HTMLImageElement;
+        image.src = e.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  }
+
+}
 
 }
