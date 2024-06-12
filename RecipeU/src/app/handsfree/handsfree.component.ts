@@ -45,6 +45,7 @@ export class HandsfreeComponent  implements OnInit {
   }
 
   dismissModal() {
+    this.stopSpeech();
     this.modalController.dismiss();
   }
 
