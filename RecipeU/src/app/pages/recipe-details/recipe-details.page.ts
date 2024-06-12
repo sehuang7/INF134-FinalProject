@@ -62,7 +62,7 @@ export class RecipeDetailsPage implements OnInit {
   }
 
   async openHandsFreeMode(event: any) {
-    if (event.detail.checked) {
+    if (event.detail) {
       const modal = await this.modalController.create({
         component: HandsfreeComponent,
         componentProps: {

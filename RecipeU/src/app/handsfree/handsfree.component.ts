@@ -16,6 +16,19 @@ export class HandsfreeComponent  implements OnInit {
   volumeIcon: string = 'volume-high-outline'; // Default icon name
   additionalCardTitle: string = 'Perform Gesture'; // Title for the new card
   pressedButton: string = ''; // Track which button is pressed
+  ingredientChecklist: string[][] = [[],
+                                     ['Pancetta'],
+                                     ['Eggs','Black Pepper'],
+                                     ['Spaghetti'],
+                                     ['Garlic'],
+                                     ['Butter', 'Chopped Pancetta', 'Squashed Garlic'],
+                                     [],
+                                     [],
+                                     ['Cup of Pasta Water', 'Spaghetti'],
+                                     ['Cheese', 'Eggs'],
+                                     ['Mixed Eggs and Cheese'],
+                                     ['Pasta Water'],
+                                     ['Cheese (optional)', 'Black Pepper (optional)']]
   
 
   constructor(private modalController: ModalController) { 
@@ -34,7 +47,10 @@ export class HandsfreeComponent  implements OnInit {
     return (this.currentStepIndex + 1) / this.recipeData.instructions.length;
   }
 
-
+  // Method to display ingredients for the current step
+  hasOptionsForCurrentStep(): boolean {
+      return this.ingredientChecklist[this.currentStepIndex] && this.ingredientChecklist[this.currentStepIndex].length > 0;
+  }
 
   nextStep() {
     if (this.currentStepIndex < this.recipeData.instructions.length - 1) {

@@ -1,73 +1,62 @@
 <ion-content>
   <ion-card>
-    
-    <!-- <ion-card-header class="card-header-with-button">
-      <ion-button (click)="dismissModal()">
-        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
-      </ion-button>
-      <ion-card-title>Step {{ currentStepIndex + 1 }}</ion-card-title>
-
-      <ion-icon 
-      (click)="toggleVolume()" 
-      [name]="volumeIcon" 
-      [class.active]="isVolumeActive"
-      class="volume-icon" 
-      slot="end">
-    </ion-icon>
-
-    </ion-card-header> -->
 
         <ion-card-header class="card-header-with-button">
-          <ion-button (click)="dismissModal()" class="close-button">
-            <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+          <ion-button (click)="dismissModal()" class="close-button" shape="round" fill="clear" style="color:black;">
+            <ion-icon slot="icon-only" name="close-outline" size="large"></ion-icon>
           </ion-button>
-          <ion-card-title>Step {{ currentStepIndex + 1 }}</ion-card-title>
-          <!-- Volume icon addition -->
-          <ion-button class="volume-icon">
-            <ion-icon slot="icon-only" name="volume-high"></ion-icon>
-          </ion-button>
+          <ion-card-title>Step by Step Instructions</ion-card-title>
         </ion-card-header>
     
     <ion-card-content>
-            <!-- Progress bar -->
+      <h3 style="color: black;">Step {{ currentStepIndex + 1 }}/{{this.recipeData.instructions.length}}</h3>
       <ion-progress-bar [value]="progress"></ion-progress-bar>
 
-      <ion-list class="ingredient-list">
-        <ion-item>
-          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
-            <div class="ion-text-wrap"> Chopped Pancetta</div>
-          </ion-checkbox>
-        </ion-item>
-        
-        <ion-item>
-          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
-            <div class="ion-text-wrap">Squashed Garlic</div>
-          </ion-checkbox>
-        </ion-item>
-        <ion-item>
-          <ion-checkbox labelPlacement="end" justify="start" class="ingredient-checkbox">
-            <div class="ion-text-wrap">Butter</div>
-          </ion-checkbox>
-        </ion-item>
-      </ion-list>
+      <ion-card style="color: black;background-color: #D5EDD8;margin-left:0px;margin-bottom:0px;margin-right:0px;">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <h2 style="font-size: large;">Step {{ currentStepIndex + 1 }}:</h2>
+            </ion-col>
+            <ion-col size="auto">
+              <div class="ion-align-items-end">
+                <ion-button id="volume-icon" shape="round" fill="clear" style="color: black;">
+                  <ion-icon slot="icon-only" name="volume-high-outline" size="large"></ion-icon>
+                </ion-button>
+              </div>
+            </ion-col>
+          </ion-row>
 
+          <ion-row>
+            <h1 style="font-size:xx-large;">{{ recipeData.instructions[currentStepIndex] }}</h1>
+          </ion-row>
 
-      <h1>{{ recipeData.instructions[currentStepIndex] }}</h1>
-      
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button expand="block" (click)="previousStep()" [disabled]="currentStepIndex === 0">
-              Previous
-            </ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button expand="block" (click)="nextStep()" [disabled]="currentStepIndex === recipeData.instructions.length - 1">
-              Next
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+          <ion-row *ngIf="hasOptionsForCurrentStep()">
+            <ion-col>
+              <ion-list lines="none" *ngIf="hasOptionsForCurrentStep()">
+                <ion-item *ngFor="let option of ingredientChecklist[currentStepIndex]">
+                  <ion-checkbox labelPlacement="end" justify="start">
+                    <div class="ion-text-wrap">{{ option }}</div>
+                  </ion-checkbox>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+              <ion-button style="--background:#85C784;" strong="true" expand="block" (click)="previousStep()" [disabled]="currentStepIndex === 0">
+                Previous
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button style="--background:#85C784;" strong="true" expand="block" (click)="nextStep()" [disabled]="currentStepIndex === recipeData.instructions.length - 1">
+                Next
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
     </ion-card-content>
   </ion-card>
 
@@ -81,17 +70,17 @@
         <ion-grid>
           <ion-row>
             <ion-col>
-              <ion-button expand="block" (click)="handleAction('Previous')" [class.pressed]="pressedButton === 'Previous'">
+              <ion-button strong="true" expand="block" (click)="handleAction('Previous')" [class.pressed]="pressedButton === 'Previous'">
               <span class="emoji">👈</span><span>Previous Step</span>
               </ion-button>
             </ion-col>
             <ion-col>
-              <ion-button expand="block" (click)="handleAction('Repeat')" [class.pressed]="pressedButton === 'Repeat'">
+              <ion-button strong="true" expand="block" (click)="handleAction('Repeat')" [class.pressed]="pressedButton === 'Repeat'">
                 <span class="emoji">🙌</span><span>Repeat</span>
               </ion-button>
             </ion-col>
             <ion-col>
-              <ion-button expand="block" (click)="handleAction('Next')" [class.pressed]="pressedButton === 'Next'">
+              <ion-button strong="true" expand="block" (click)="handleAction('Next')" [class.pressed]="pressedButton === 'Next'">
                 <span class="emoji">👉</span><span>Next Step</span>    
               </ion-button>
             </ion-col>

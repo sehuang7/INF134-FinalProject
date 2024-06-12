@@ -28,23 +28,6 @@
     }
   }
 
-//   .card-header-with-button {
-//     position: relative;
-//   }
-  
-//   .card-header-with-button ion-button {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     margin-bottom: 16px;
-//     margin-right: 16px; /* Add desired spacing */
-//   }
-  
-//   .card-header-with-button ion-card-title {
-//    margin-top: 40px;
-
-//   }
-
   .card-header-with-button {
     position: relative;
     display: flex;
@@ -60,7 +43,6 @@
   }
   
   .volume-icon {
-    position: absolute;
     right: 0;
     margin-right: 8px; /* Add margin for spacing */
     cursor: pointer;
@@ -77,14 +59,19 @@
   }
 
   ion-progress-bar {
-    margin-top: 10px; /* Adjust margin as desired */
     margin-bottom: 10px; /* Adjust margin as desired */
+    --progress-background: #87FF84;
+    --background: white;
   }
   
   ion-card img {
     width: 100%; /* Ensure the image takes full width of the card */
     height: auto; /* Maintain aspect ratio */
     margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  ion-card {
+    --background: #A4C2A8;
   }
   
   /* Style for pressed button */
@@ -98,6 +85,41 @@
     margin-bottom: 4px; /* Space between emoji and text */
   }
 
-//   .volume-icon.active {
-//     color: black; /* Change color when active */
-//   }
+  ion-item {
+    --inner-padding-end: 0; /* Reduce padding on the end side */
+    --inner-padding-start: 0; /* Reduce padding on the start side */
+    --background: #D5EDD8;
+    color: black;
+    --background-hover: #85C784;
+    --color-hover: black;
+  }
+
+ion-list {
+  background: #D5EDD8;
+}
+
+ion-card-title {
+  color: black;
+}
+
+ion-checkbox {
+  --border-color: black;
+  --border-color-checked: black;
+  --checkbox-background: #f5f5f5;
+  --checkbox-background-checked: #f5f5f5;
+  --checkmark-color: black;
+}
+  
+ion-checkbox {
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    overflow-wrap: break-word; /* Break long words */
+    word-break: break-word; /* Ensure words break properly to next line */
+}
+
+ion-icon {
+  color: black;
+}
+
+ion-content {
+  --background: #FFF9ED;
+}

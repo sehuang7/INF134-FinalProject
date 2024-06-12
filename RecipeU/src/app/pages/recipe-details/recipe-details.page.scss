@@ -2,18 +2,40 @@
 
 ion-card {
   margin-bottom: 40px; /* Adjust the space as needed */
+  background-color: #f5f5f5;
+  border-radius: 10px; 
 }
 
 ion-item {
     --inner-padding-end: 0; /* Reduce padding on the end side */
     --inner-padding-start: 0; /* Reduce padding on the start side */
+    --background: #f5f5f5;
+    color: black;
+    --background-hover: #85C784;
+    --color-hover: black;
   }
+
+ion-list {
+  background: #f5f5f5;
+}
+
+ion-card-title {
+  color: black;
+}
+
+ion-checkbox {
+  --border-color: black;
+  --border-color-checked: black;
+  --checkbox-background: #f5f5f5;
+  --checkbox-background-checked: #f5f5f5;
+  --checkmark-color: #85C784;
+}
   
-  ion-checkbox {
+ion-checkbox {
     white-space: pre-wrap; /* Preserve whitespace and wrap text */
     overflow-wrap: break-word; /* Break long words */
     word-break: break-word; /* Ensure words break properly to next line */
-  }
+}
 
 ion-icon {
   color: black;
@@ -26,4 +48,33 @@ ion-icon {
 ion-thumbnail {
   --size: 160px;
   --border-radius: 10px;
+}
+
+ion-back-button {
+  color: black;
+}
+
+ion-title {
+  color: black;
+}
+
+ion-content {
+  --background: #A4C2A8;
+
+}
+
+ion-toolbar {
+  --background: #A4C2A8;
+}
+
+ion-col {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
+
+h4 {
+  color: black;
 }

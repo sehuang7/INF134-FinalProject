@@ -7,7 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
+
 <ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>  
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -21,7 +23,9 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    
+
+
+  <ion-card style="background-color:#DCDCDC;margin:5px;">  
     <ion-grid>
       <ion-row>
         <ion-col><h4>Details</h4></ion-col>
@@ -37,14 +41,16 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>Prep: {{recipe.prep_time}}</ion-col>
-        <ion-col>Cook: {{recipe.cook_time}}</ion-col>
+        <ion-col><strong>Prep: </strong>{{recipe.prep_time}}</ion-col>
+        <ion-col><strong>Cook: </strong>{{recipe.cook_time}}</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col>Rating: {{recipe.rating}}/5</ion-col>
-        <ion-col>Contains: {{recipe.contains}}</ion-col>
+        <ion-col><strong>Rating: </strong>{{recipe.rating}}/5</ion-col>
+        <ion-col><strong>Contains: </strong>{{recipe.contains}}</ion-col>
       </ion-row>
     </ion-grid>
+  </ion-card>
+  </ion-card>
 
     <ion-card>
       <ion-card-header>
@@ -52,7 +58,7 @@
       </ion-card-header>
 
       <ion-card-content>
-        <ion-list>
+        <ion-list lines="none">
           <ion-item *ngFor="let ingredient of recipe.ingredients_list">
             <ion-checkbox labelPlacement="end" justify="start">
               <div class="ion-text-wrap">{{ ingredient }}</div>
@@ -64,12 +70,15 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-toggle label-placement="start" justify="end" (ionChange)="openHandsFreeMode($event)">Hands Free Mode</ion-toggle>
+        <!-- <ion-toggle label-placement="start" justify="end" (ionChange)="openHandsFreeMode($event)">Hands Free Mode</ion-toggle> -->
+         <div class="ion-text-end">
+          <ion-button strong="true" size="small" (click)="openHandsFreeMode($event)">Hands Free Mode</ion-button>
+         </div>
         <ion-card-title>Step by step instructions</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
-        <ion-list>
+        <ion-list lines="none">
           <ion-item *ngFor="let instruction of recipe.instructions">
             <ion-checkbox labelPlacement="end" justify="start">
               <div class="ion-text-wrap">{{ instruction }}</div>
