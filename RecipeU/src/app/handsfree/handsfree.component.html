@@ -23,6 +23,18 @@
                 <ion-button id="volume-icon" shape="round" fill="clear" style="color: black;">
                   <ion-icon slot="icon-only" name="volume-high-outline" size="large"></ion-icon>
                 </ion-button>
+                <ion-popover trigger="volume-icon" side="bottom" alignment="end" triggerAction="click" >
+                  <ng-template>
+                      <ion-item>
+                        <ion-label>Volume</ion-label>
+                        <ion-range min="0" max="10" step="1" [pin]="true" [(ngModel)]="volume" (ionChange)="updateVolume($event)"></ion-range>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Speed</ion-label>
+                        <ion-range min="0.1" max="2" step="0.1" [pin]="true"  [(ngModel)]="speed" (ionChange)="updateSpeed($event)"></ion-range>
+                      </ion-item>
+                  </ng-template>
+                </ion-popover>
               </div>
             </ion-col>
           </ion-row>
@@ -66,7 +78,7 @@
         <ion-card-title>{{ additionalCardTitle }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <img [src]="'https://ionicframework.com/docs/img/demos/card-media.png'" alt="Recipe Image" />
+        <img [src]="'https://t4.ftcdn.net/jpg/01/07/57/91/360_F_107579101_QVlTG43Fwg9Q6ggwF436MPIBTVpaKKtb.jpg'" alt="Camera Image" />
         <ion-grid>
           <ion-row>
             <ion-col>
@@ -82,6 +94,35 @@
             <ion-col>
               <ion-button strong="true" expand="block" (click)="handleAction('Next')" [class.pressed]="pressedButton === 'Next'">
                 <span class="emoji">👉</span><span>Next Step</span>    
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button strong="true" expand="block" (click)="handleAction('Stop')" [class.pressed]="pressedButton === 'Stop'">
+              <span class="emoji">🤚</span><span>Stop</span>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button strong="true" expand="block" (click)="handleAction('VolumeUp')" [class.pressed]="pressedButton === 'VolumeUp'">
+              <span class="emoji">🔊</span><span>Volume Up</span>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button strong="true" expand="block" (click)="handleAction('VolumeDown')" [class.pressed]="pressedButton === 'VolumeDown'">
+              <span class="emoji">🔉</span><span>Volume Down</span>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-button strong="true" expand="block" (click)="handleAction('SpeedUp')" [class.pressed]="pressedButton === 'SpeedUp'">
+              <span class="emoji">⏩</span><span>Increase Speed</span>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button strong="true" expand="block" (click)="handleAction('SpeedDown')" [class.pressed]="pressedButton === 'SpeedDown'">
+              <span class="emoji">⏪</span><span>Decrease Speed</span>
               </ion-button>
             </ion-col>
           </ion-row>

@@ -102,6 +102,14 @@ ion-card-title {
   color: black;
 }
 
+ion-range {
+  --bar-background: white;
+  --bar-background-active: black;
+  --knob-background: black;
+  --pin-background: black;
+  --pin-color: white;
+}
+
 ion-checkbox {
   --border-color: black;
   --border-color-checked: black;
